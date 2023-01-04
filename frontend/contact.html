@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aabm</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script>
+    addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);
+</script>
+<style>
+    .container1 {
+        display: grid;
+        row-gap: 10px;
+        /* justify-content: center; */
+        margin-left: 20vw;
+        margin-right: 20vw;
+        color: azure;
+    }
+
+    .boxc {
+        margin-top: 100px;
+        margin-left: 10vw;
+        border-radius: 15px;
+        background-color: black;
+        filter: opacity(50%);
+        width: 78vw;
+        padding-bottom: 20px;
+    }
+
+    button:hover {
+        color: rgb(238, 238, 238);
+        background-color: rgb(41, 38, 38);
+    }
+
+    .head {
+        /* align-items: center; */
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    @media only screen and (max-width:310px) {
+        .container1 {
+            display: grid;
+            row-gap: 10px;
+            justify-content: center;
+
+            margin-left: 0vw;
+            margin-right: 0vw;
+            color: azure;
+            /* overflow: scroll; */
+        }
+
+        .boxc {
+            margin-top: 100px;
+            margin-left: 0vw;
+            border-radius: 15px;
+            background-color: black;
+            filter: opacity(50%);
+            width: 100vw;
+            padding-bottom: 20px;
+            overflow: scroll;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help</a>
+        <a href="logout">Logout</a>
+
+    </div>
+    <h1 class="head">Contact US</h1>
+    <div class="boxc">
+        <form class="container1" action="contact" method="post">
+            <p>Email</p>
+            <input type="email" name="email" id="email" placeholder="xyz@.com" required>
+            <p>Title</p>
+            <input type="text" required name="reason" placeholder="reason/Subject/title for contact us">
+            <p>Discription</p>
+            <textarea name="discription" required id="discription" placeholder="Discribe your reson" cols="30"
+                rows="10"></textarea>
+            <button style="height: 50px ;">
+                Submit
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

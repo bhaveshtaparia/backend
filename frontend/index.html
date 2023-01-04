@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aabm</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script>
+    addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);
+</script>
+<style>
+    .colori {
+        margin-top: 20px;
+    }
+
+    .start {
+
+        text-align: center;
+        width: 50vw;
+
+    }
+
+    .center {
+        padding-top: 50px;
+
+        text-align: center;
+    }
+
+    .timer {
+        font-size: 60px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="help.html">Help</a>
+        <a href="logout">Logout</a>
+
+    </div>
+
+    <p class="colori">Lets play the Game</p>
+    <p class="colori">Name:- Typing game</p>
+    <div class="box2">
+
+        <button onclick="plays()" class="start" id="btn">Play</button>
+        <div id="play" style="font-size: 50px">
+        </div>
+        <div class="colori timer" id="timer">
+
+        </div>
+        <div class="center">
+            <input width="20vw" type="text" id="key" onchange="games()" placeholder="type the number">
+            <!-- <button onclick="games()">ENTER</button> -->
+        </div>
+        <div class="center" id="points">
+            points
+        </div>
+    </div>
+    <script>
+        let timeleft = 10;
+        const com = "abcdefghijklmnopqrstuvwxyz";
+        let result;
+        let b = 0;
+        let a = "sdfasfsafadsfsdfs";
+
+        function plays() {
+            a = Math.round(1 + 100 * Math.random());
+
+            document.getElementById("play").innerHTML = a;
+            b = 0;
+            gamespoints();
+        }
+
+        function gamespoints() {
+            document.getElementById("points").innerHTML = b;
+        }
+
+
+        function games() {
+
+            if (a == document.getElementById("key").value) {
+
+                function times() {
+                    timeleft--;
+                    document.getElementById("timer").innerHTML = timeleft;
+
+                    if (timeleft > 0) {
+                        setTimeout(times, 1000);
+                    } else {
+                        alert("High score is " + b);
+                        a = "score is: " + b;
+                        document.getElementById("play").innerHTML = a;
+                        a = "gdgrdsdxgggggggg";
+                        b = 0;
+
+                    }
+                }
+                timeleft = 5;
+                if (b > 5) {
+                    a = "";
+                    for (let i = 0; i < 4; i++) {
+                        result = Math.round(0 + 26 * Math.random());
+                        a += com.charAt(result);
+                    }
+                } else {
+                    a = Math.round(1 + 100 * Math.random());
+                }
+                document.getElementById("play").innerHTML = a;
+                document.getElementById("key").value = "";
+                if (b == 0) {
+                    setTimeout(times, 1000);
+                }
+                b++;
+                gamespoints();
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+body{
+    background-image:  url("/images/images\ \(5\).jpg");
+    /* background-repeat: no-repeat; */
+    background-size: 100vw 100vh;
+    background-repeat: repeat-y;
+   
+}
+
+.container {
+    background-color: black;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  
+}
+.header1{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 60px;
+}
+a {
+    color: aliceblue;
+    margin: 20px 20px 20px 200px;
+    text-decoration: dashed;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: rgb(179, 216, 216);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    color: brown;
+    margin-top: 10px;
+    animation-name: header;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes header {
+    0%{
+        padding-top: 20px;
+    }
+    50%{
+        color: rgb(135, 177, 94);
+        padding-top: 12px;
+        
+    }
+    100%{
+        color: rgb(151, 53, 170);
+        padding-top: 5px;
+        
+    }
+}
+.box{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display:grid;
+    grid-gap: 5px 5px;
+    justify-content: center;
+    grid-template-columns: auto auto;
+}
+.box1{
+    background-color: rgb(22, 24, 21);
+    filter: opacity(50%);
+    color: rgb(255, 255, 255);
+  text-align: center;
+ width: 33vw;
+ height: 150px;
+ 
+ 
+ 
+}
+    @media only screen and (max-width:1353px) {
+        a {
+            margin: 20px 20px 20px 100px;
+        }
+    }
+    
+    @media only screen and (max-width:854px) {
+        a {
+            margin: 20px 20px 20px 20px;
+        }
+     .box{
+        grid-template-columns: auto;
+     }
+     .box1{
+        width: 66vw;
+        height: 170px;
+        overflow: scroll;
+     }
+    }
+    
+    @media only screen and (max-width:457px) {
+        .container {
+            
+            background-color: black;
+            border-radius: 10px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+        }
+    
+        a {
+            color: rgb(63, 127, 184);
+            margin: 20px 20px 20px 20px;
+            display: block;
+            text-align: center;
+    
+            /* margin: 5px 5px 5px 5px; */
+        }
+        .box{
+            grid-template-columns: auto;
+         }
+         .box1{
+            width: 90vw;
+            height: 170px;
+            overflow: scroll;
+         }
+    
+    
+    }
+    .colori{
+        display: flex;
+        justify-content: center;
+        animation-name: color;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    .colori2{
+        display: flex;
+        justify-content: center;
+        animation-name: color;
+        animation-duration: 1s;
+        animation-delay: 2.5s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+    @keyframes color{
+        0%{
+color: blue;
+}
+20%{
+            color: rgb(0, 255, 221);
+            
+        }
+        40%{
+            color: rgb(255, 187, 0);
+            
+        }
+        60%{
+            color: rgb(255, 0, 0);
+            
+        }
+        80%{
+            color: rgb(166, 255, 0);
+            
+        }
+        100%{
+            color: rgb(194, 88, 255);
+            
+        }
+    }
+    .box2{
+        background-color: rgb(0, 0, 0);
+        filter: opacity(60%);
+        width: 60vw;
+        height: 400px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 21%;
+        color: azure;
+        
+    }
+    @media only screen and (max-width:379px){
+        .box2{
+            width: 80vw;
+            height: 400px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 10%;
+        }
+    }

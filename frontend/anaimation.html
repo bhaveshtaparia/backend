@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <link rel="stylesheet" href="style.css"> -->
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        background-color: black;
+    }
+
+    /* 
+    p {
+        color: blueviolet;
+    } */
+
+    .container {
+        display: flex;
+        justify-content: center;
+        background-color: rgb(247, 247, 247);
+        color: blueviolet;
+        width: 150px;
+        height: 25px;
+        font-size: 15px;
+        padding-top: 2px;
+        border-radius: 50px;
+        /* border: 50px yellow solid; */
+
+        /* margin: 50px 50px 50px 50px; */
+        animation-name: bhanu;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+        text-align: center;
+
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    @keyframes bhanu {
+        from {
+            /* margin: 50px 50px 50px 50px; */
+            margin-top: 80px;
+        }
+
+        to {
+            /* margin: 10px 10px 10px 10px; */
+            margin-top: 10px;
+        }
+    }
+
+    .container2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 40vh;
+
+    }
+</style>
+<script>
+    addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+    }, false);
+</script>
+
+<body>
+    <div class="container2">
+        <div class="container">
+            Not Found
+        </div>
+    </div>
+</body>
+
+</html>
